@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+# Hexagonal-polideportivos
+Reservas de canchas por polideportivos con 3 vistas
