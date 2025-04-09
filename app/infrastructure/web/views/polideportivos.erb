@@ -1,0 +1,27 @@
+<h1>Lista de Polideportivos</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Dirección</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @polideportivos.each do |polideportivo| %>
+      <tr>
+        <td><%= polideportivo.nombre %></td>
+        <td><%= polideportivo.direccion %></td>
+        <td>
+          <a href="/polideportivos/<%= polideportivo.id %>/edit">Editar</a>
+          <form action="/polideportivos/<%= polideportivo.id %>" method="post" style="display:inline;">
+            <input type="hidden" name="_method" value="delete">
+            <button type="submit">Eliminar</button>
+          </form>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<a href="/polideportivos/new">Añadir Polideportivo</a>
